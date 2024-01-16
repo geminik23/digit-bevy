@@ -1,0 +1,24 @@
+[package]
+name = "digit_bevy"
+version = "0.1.0"
+edition = "2021"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[profile.dev]
+opt-level = 1
+
+[profile.dev.package."*"]
+opt-level = 3
+
+[dependencies]
+log="0.4"
+dotenv = "0.15"
+env_logger="0.10"
+anyhow = "1.0"
+wonnx = "0.4"
+image = "0.24"
+ndarray = "0.15"
+pollster = "0.3"
+bevy = {version = "0.12", features = ["dynamic_linking"]}
+bevy-inspector-egui = "0.22"
